@@ -1,0 +1,123 @@
+/* Base styles */
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  background-color: #f8f8f8;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.footer-logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo p {
+  color: #383838;
+  font-size: 2.875rem; /* Responsive font size */
+  font-weight: 700;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 50px;
+  color: #252525;
+  font-size: 1.25rem; /* Responsive font size */
+  margin-top: 20px;
+  justify-content: center; /* Center align links */
+}
+
+.footer-links li {
+  cursor: pointer;
+}
+
+.footer-social-icon {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-icons-container {
+  padding: 10px;
+  padding-bottom: 6px;
+}
+
+.footer-copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  color: #1a1a1a;
+  font-size: 1.25rem; /* Responsive font size */
+}
+
+.footer-copyright hr {
+  width: 80%;
+  border: none;
+  border-radius: 10px;
+  height: 3px;
+  background: #c7c7c7;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 15px; /* Adjust padding */
+  }
+
+  .footer-logo p {
+    font-size: 2.25rem; /* Smaller font size */
+  }
+
+  .footer-links {
+    gap: 30px; /* Reduce gap */
+    font-size: 1rem; /* Smaller font size */
+    justify-content: center; /* Center align links */
+  }
+
+  .footer-social-icon {
+    gap: 15px; /* Reduce gap between social icons */
+  }
+
+  .footer-copyright {
+    font-size: 1rem; /* Smaller font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 20px 10px; /* Further adjust padding */
+    gap: 30px; /* Reduce gap */
+  }
+
+  .footer-logo p {
+    font-size: 1.875rem; /* Smaller font size */
+  }
+
+  .footer-links {
+    gap: 20px; /* Further reduce gap */
+    font-size: 0.875rem; /* Smaller font size */
+  }
+
+  .footer-social-icon {
+    gap: 10px; /* Further reduce gap between social icons */
+  }
+
+  .footer-copyright {
+    font-size: 0.875rem; /* Smaller font size */
+  }
+}

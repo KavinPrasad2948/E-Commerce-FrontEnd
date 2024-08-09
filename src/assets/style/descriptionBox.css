@@ -1,0 +1,98 @@
+.descriptionbox {
+  margin: 50px 70px;
+}
+
+.descriptionbox-navigator {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.descriptionbox-nav-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+  width: 171px;
+  height: 70px;
+  cursor: pointer;
+}
+
+.descriptionbox-nav-box.fade {
+  color: #555;
+}
+
+.descriptionbox-nav-box:hover,
+.descriptionbox-nav-box.active {
+  border-bottom: 2px solid #333;
+  transition: border-bottom 0.1s ease;
+}
+
+.descriptionbox-description {
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.descriptionbox-description p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  font-size: 16px;
+  color: #333;
+}
+
+.descriptionbox-description p:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .descriptionbox {
+    margin: 40px 50px;
+  }
+
+  .descriptionbox-nav-box {
+    width: 150px;
+    height: 60px;
+    font-size: 15px;
+  }
+
+  .descriptionbox-description {
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .descriptionbox {
+    margin: 30px 20px;
+  }
+
+  .descriptionbox-nav-box {
+    width: 120px;
+    height: 50px;
+    font-size: 14px;
+  }
+
+  .descriptionbox-description {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .descriptionbox {
+    margin: 20px 10px;
+  }
+
+  .descriptionbox-nav-box {
+    width: 100px;
+    height: 40px;
+    font-size: 12px;
+  }
+
+  .descriptionbox-description {
+    padding: 8px;
+  }
+}

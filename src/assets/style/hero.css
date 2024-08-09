@@ -1,0 +1,145 @@
+.hero {
+  height: 100vh;    
+  background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px; 
+  position: relative; /* Add relative positioning */
+  overflow: hidden; /* Hide any overflow */
+}
+
+.hero-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 100px; 
+  line-height: 1.5; 
+  z-index: 1; /* Ensure the left section stays above the image */
+}
+
+.hero-left h2 {
+  color: #090909;
+  font-size: 22px; 
+  font-weight: 600;
+}
+
+.hero-left p {
+  color: #171717;
+  font-size: 70px; 
+  font-weight: 700;
+  margin: 0; 
+}
+
+.hero-hand-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
+.hero-hand-icon img {
+  width: 50px; 
+}
+
+.hero-latest-btn {
+  display: flex;
+  gap: 40px;
+  width: 250px;
+  padding: 12px 24px;
+  border: 1px solid #4f4f4f;
+  border-radius: 75px;
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  font-size: 19px;
+  cursor: pointer;
+  color: black;
+  z-index: 1;
+}
+
+.hero-right img {
+  width: 50%;
+  height: auto;
+  margin-right: -100px;
+  z-index: 0; /* Place image behind content */
+  position: absolute; /* Position image absolutely */
+  bottom: 0; /* Align the image to the bottom of the hero section */
+  right: 0; /* Align the image to the right */
+}
+
+/* Large screens (desktops) */
+@media (max-width: 1280px) {
+  .hero-left {
+      padding-left: 50px;
+  }
+
+  .hero-left p {
+      font-size: 60px;
+  }
+
+  .hero-right img {
+      width: 40%; 
+      margin-right: -10px;
+      top: -20px;
+  }
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+  .hero {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .hero-left {
+      padding-left: 0;
+      text-align: center;
+  }
+
+  .hero-left p {
+      font-size: 40px;
+  }
+
+  .hero-latest-btn {
+      width: 200px;
+      font-size: 16px;
+  }
+
+  .hero-right img {
+      margin-right: 0;
+      width: 70%; /* Adjust image size */
+      position: relative; /* Change position for better alignment */
+  }
+}
+
+/* Small screens (large smartphones) */
+@media (max-width: 480px) {
+  .hero-left p {
+      font-size: 30px;
+  }
+
+  .hero-latest-btn {
+      width: 180px;
+      font-size: 14px;
+  }
+
+  .hero-right img {
+      width: 60%;
+  }
+}
+
+/* Extra small screens (small smartphones) */
+@media (max-width: 320px) {
+  .hero-left p {
+      font-size: 24px;
+  }
+
+  .hero-latest-btn {
+      width: 150px;
+      font-size: 12px;
+  }
+
+  .hero-right img {
+      width: 50%;
+  }
+}

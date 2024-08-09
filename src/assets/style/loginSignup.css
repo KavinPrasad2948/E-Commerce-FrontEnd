@@ -1,0 +1,116 @@
+.loginsignup {
+  width: 100%;
+  min-height: 80vh;
+  background: #fce3fe;
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2em; /* Added padding for smaller screens */
+}
+
+.form {
+  background-color: white;
+  padding: 3.125em;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 5px 5px 15px -1px rgba(0, 0, 0, 0.75);
+  margin-bottom: 30px;
+  width: 100%; /* Make form take full width on smaller screens */
+  max-width: 400px; /* Limit max width for larger screens */
+}
+
+.signup {
+  color: rgb(77, 75, 75);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  font-weight: bold;
+  font-size: x-large;
+  margin-bottom: 0.5em;
+  text-align: center; /* Center the signup text */
+}
+
+.form--input {
+  width: 100%;
+  margin-bottom: 1.25em;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding: 0.8em;
+  font-family: "Inter", sans-serif;
+  outline: none;
+  box-sizing: border-box; /* Ensure padding doesn't affect the width */
+}
+
+.form--input:focus {
+  border: 1px solid #fce3fe;
+  outline: none;
+}
+
+.form--marketing {
+  display: flex;
+  margin-bottom: 1.25em;
+  align-items: center;
+  justify-content: center; /* Center checkbox and label */
+}
+
+.form--marketing > input {
+  margin-right: 0.625em;
+}
+
+.form--marketing > label {
+  color: grey;
+}
+
+.checkbox,
+input[type="checkbox"] {
+  accent-color: #fce3fe;
+}
+
+.signin {
+  color: rgba(88, 87, 87, 0.822);
+  font-size: 14px;
+  padding: 1.25em;
+  text-align: center; /* Center the signin text */
+}
+
+.signin a {
+  color: royalblue;
+}
+
+.form--submit {
+  width: 50%;
+  padding: 0.625em;
+  border-radius: 5px;
+  color: white;
+  background-color: #639;
+  border: 1px dashed #639;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.form--submit:hover {
+  color: #639;
+  background-color: white;
+  border: 1px dashed #639;
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+  .form {
+    padding: 2em; 
+    max-width: 50%;
+  }
+
+  .signup {
+    font-size: large; /* Adjust font size for smaller screens */
+  }
+
+  .form--submit {
+    width: 100%; /* Make the submit button full width */
+  }
+}
