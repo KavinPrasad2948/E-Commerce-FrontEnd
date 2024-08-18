@@ -13,7 +13,7 @@ export const LoginSignup = () => {
 
   const login = async () => {
     try {
-      const response = await axios.post("http://localhost:5000/login", {
+      const response = await axios.post("https://e-commerce-backend-w89l.onrender.com/login", {
         email,
         password,
       });
@@ -31,13 +31,14 @@ export const LoginSignup = () => {
       }
     } catch (err) {
       setError(err.response?.data?.message || "An error occurred during login.");
+      console.log(err.response?.data?.message || "An error occurred during");
       setSuccess("");
     }
   };
 
   const signup = async () => {
     try {
-      const response = await axios.post("http://localhost:5000/signup", {
+      const response = await axios.post("https://e-commerce-backend-w89l.onrender.com/signup", {
         name: username,
         email,
         password,
@@ -56,6 +57,7 @@ export const LoginSignup = () => {
       }
     } catch (err) {
       setError(err.response?.data?.message || "An error occurred during signup.");
+      console.log(err.response?.data?.message || "An error occurred during");
       setSuccess("");
     }
   };

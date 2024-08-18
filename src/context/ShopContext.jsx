@@ -21,7 +21,7 @@ const ShopContextProvider = (props) => {
       [itemId]: prev[itemId] + 1,
     }));
     if (localStorage.getItem("auth_token")) {
-      fetch("http://localhost:5000/addtocart", {
+      fetch("https://e-commerce-backend-w89l.onrender.com/addtocart", {
         method: "POST",
         headers: {
           Accept: "application/form-data",
@@ -41,7 +41,7 @@ const ShopContextProvider = (props) => {
       [itemId]: Math.max(prev[itemId] - 1, 0), // Ensure quantity doesn't go negative
     }));
     if (localStorage.getItem("auth_token")) {
-      fetch("http://localhost:5000/deletefromcart", {
+      fetch("https://e-commerce-backend-w89l.onrender.com/deletefromcart", {
         method: "POST",
         headers: {
           Accept: "application/form-data",
@@ -81,7 +81,7 @@ const ShopContextProvider = (props) => {
   useEffect(() => {
     const fetchCartItems = async () => {
       try {
-        const response = await fetch("http://localhost:5000/getcartitems", {
+        const response = await fetch("https://e-commerce-backend-w89l.onrender.com/getcartitems", {
           method: "GET",
           headers: {
             Accept: "application/json",
